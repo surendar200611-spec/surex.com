@@ -715,6 +715,8 @@ input:focus, textarea:focus {
   width: 60px;
   height: 60px;
   z-index: 1000;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 .whatsapp-btn svg {
