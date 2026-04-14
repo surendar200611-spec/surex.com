@@ -1,0 +1,172 @@
+/* Project Detail Styles - Surex.com */
+
+.project-detail-hero {
+    padding: 160px 0 80px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    text-align: center;
+}
+
+.project-detail-hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    letter-spacing: -2px;
+}
+
+.project-badge-large {
+    display: inline-block;
+    padding: 8px 24px;
+    background: #fef9c3; /* Soft yellow for Dolfin */
+    color: #854d0e;
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    border: 1px solid #fde047;
+}
+
+.project-summary {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* Floating Showcase Section */
+.floating-showcase {
+    padding: 100px 0 200px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.floating-grid {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 800px;
+}
+
+.floating-item {
+    position: absolute;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 50px 100px -20px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.8);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    background: white;
+}
+
+.floating-item:hover {
+    transform: translateY(-20px) scale(1.02) rotate(0deg) !important;
+    z-index: 50 !important;
+    box-shadow: 0 60px 120px -20px rgba(0,0,0,0.25);
+}
+
+.item-1 {
+    top: 50px;
+    left: 0;
+    width: 65%;
+    z-index: 3;
+    transform: rotate(-2deg);
+}
+
+.item-2 {
+    top: 250px;
+    right: 0;
+    width: 60%;
+    z-index: 2;
+    transform: rotate(3deg);
+}
+
+.item-3 {
+    bottom: -50px;
+    left: 15%;
+    width: 70%;
+    z-index: 4;
+    transform: rotate(-1deg);
+    box-shadow: 0 70px 140px -30px rgba(0,0,0,0.3);
+}
+
+.floating-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Feature Grid */
+.detail-features {
+    padding: 120px 0;
+    background: var(--bg-offset);
+}
+
+.feature-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.feature-strip.reverse {
+    direction: rtl;
+}
+
+.feature-strip.reverse .feature-text {
+    direction: ltr;
+}
+
+.feature-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-text p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.feature-image-mini {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Back Button */
+.back-nav {
+    position: fixed;
+    top: 100px;
+    left: 40px;
+    z-index: 100;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: white;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    color: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateX(-5px);
+}
+
+@media (max-width: 968px) {
+    .project-detail-hero h1 { font-size: 3rem; }
+    .floating-grid { height: 1000px; }
+    .floating-item { position: relative; width: 100% !important; top: auto !important; left: auto !important; right: auto !important; transform: none !important; margin-bottom: 40px; }
+    .back-nav { position: relative; top: 0; left: 0; margin-bottom: 20px; padding: 0 20px; }
+    .feature-strip { grid-template-columns: 1fr; gap: 40px; }
+}

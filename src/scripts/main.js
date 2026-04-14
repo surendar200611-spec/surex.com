@@ -110,4 +110,27 @@ document.addEventListener('DOMContentLoaded', () => {
         
         setTimeout(type, 1000); // Start after hero delay
     }
+
+    // 7. Floating Parallax Effect for Project Details
+    const floatingItems = document.querySelectorAll('.floating-item');
+    if (floatingItems.length > 0) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            floatingItems.forEach((item, index) => {
+                const speed = (index + 1) * 0.15; // Different speeds for each item
+                const yPos = -(scrolled * speed);
+                item.style.transform = `translateY(${yPos}px) ${getComputedStyle(item).transform.includes('rotate') ? item.dataset.originalRotate || '' : ''}`;
+            });
+        });
+        
+        // Store original rotation to preserve it
+        floatingItems.forEach(item => {
+            const style = window.getComputedStyle(item);
+            const matrix = style.transform;
+            if (matrix && matrix !== 'none') {
+                 // For simplicity in this layout, we'll just store the initial transform
+                 item.dataset.originalRotate = style.transform;
+            }
+        });
+    }
 });
