@@ -12,7 +12,9 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         projects: resolve(__dirname, 'projects.html'),
-        reviews: resolve(__dirname, 'reviews.html')
+        reviews: resolve(__dirname, 'reviews.html'),
+        'dolfin-xerox': resolve(__dirname, 'dolfin-xerox.html'),
+        lumina: resolve(__dirname, 'lumina.html')
       }
     }
   }
